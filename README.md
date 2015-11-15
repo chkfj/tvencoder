@@ -13,7 +13,7 @@ Requiments
 How to install
 --------------------
 
-Make a virtualenv
+### Make a virtualenv
 
 ```
 virtualenv ~/env/encode
@@ -21,13 +21,13 @@ cd ~/env/encode
 source bin/activate
 ```
 
-Install packages
+### Install packages
 
 ```
 pip install -r requiments.txt
 ```
 
-Add enqueue.sh to your Chinachu
+### Add enqueue.sh to your Chinachu
 
 Example:
 
@@ -35,15 +35,31 @@ Example:
 "recordedCommand": "/home/chinachu/src/tvencoder/enqueue.sh",
 ```
 
-Run the worker
+### Run a worker
 
 ```
 cd tvencoder
 rqworker
 ```
 
-To check encoding status, access the dashboard:
+### To check encoding status
+
+Run a rq-dashboard
 
 ```
+rq-dashboard
+```
+
+Access the dashboard:
+```
 http://hostname:9181/default
+```
+
+Other Tips
+----------------
+
+### Enqueue via shell
+
+```
+find /media/hdd/recorded/ -name *ゆるゆり* -exec ./enqueue.sh {} hoge \;
 ```

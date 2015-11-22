@@ -8,4 +8,5 @@ fi
 . ${VENV}/bin/activate
 shift 1
 echo "Executing $@ in ${VENV}"exec "$@"
+$@
 

@@ -1,6 +1,6 @@
 #coding: utf-8
 
-import settings
+from settings import settings
 import os
 
 def thumbnailjob(ts):

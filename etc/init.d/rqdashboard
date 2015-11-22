@@ -20,7 +20,7 @@
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Description of the service"
-NAME=tvencoder
+NAME=rqdashboard
 DAEMON=/home/chinachu/src/tvencoder/rqdashboarddaemon.sh
 DAEMON_ARGS="--options args"
 PIDFILE=/var/run/$NAME.pid

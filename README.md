@@ -1,6 +1,6 @@
 # tvencoder
 
-Requiments
+Requirements
 -----------------
 
 * Redis
@@ -9,6 +9,7 @@ Requiments
   * virtualenv
 * Chinachu
 * FFmpeg (x264 must be enabled)
+* Supervisor
 
 How to install
 --------------------

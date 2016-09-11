@@ -12,6 +12,6 @@ def encodejob(ts, force=False):
 
     if not os.path.exists(dst_mp4) or force:
         os.system(encode_command)
-        command = "cp -f \"%s\" \"%s\"" % (dst_mp4, nfs_dst_mp4)
+        command = "mv -f \"%s\" \"%s\"" % (dst_mp4, nfs_dst_mp4)
         os.system(command)
 

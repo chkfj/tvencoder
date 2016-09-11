@@ -7,8 +7,11 @@ import sys
 
 def encodejob(ts, force=False):
     dst_mp4 = settings["encoded720_dir"] + "/" + os.path.basename(ts).split(".")[0] + ".mp4"
+    nfs_dst_mp4 = settings["nfs_encoded720_dir"] + "/" + os.path.basename(ts).split(".")[0] + ".mp4"
     encode_command = "ffmpeg -y -i %s -strict -2 -vcodec libx264 -flags +ilme+ildct -top -1 -deinterlace -crf 22 -preset slow -r 30000/1001 -aspect 16:9 -s 1280x720 -bufsize 20000k -minrate 2000k -pass 1 -movflags faststart -threads 2 %s" % (ts, dst_mp4)
 
     if not os.path.exists(dst_mp4) or force:
         os.system(encode_command)
+        command = "cp -f \"%s\" \"%s\"" % (dst_mp4, nfs_dst_mp4)
+        os.system(command)
 

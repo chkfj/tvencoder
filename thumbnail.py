@@ -14,10 +14,10 @@ def thumbnailjob(ts):
     os.system(command)
 
     # サムネイルを720p用のディレクトリとNASにコピー
-    command = "cp -f %s %s" % (thumb_jpg, thumb720_jpg)
+    command = "cp -f \"%s\" \"%s\"" % (thumb_jpg, thumb720_jpg)
     os.system(command)
-    command = "cp -f %s %s" % (thumb_jpg, nfs_thumb_jpg)
+    command = "cp -f \"%s\" \"%s\"" % (thumb_jpg, nfs_thumb_jpg)
     os.system(command)
-    command = "cp -f %s %s" % (thumb_jpg, nfs_thumb720_jpg)
+    command = "cp -f \"%s\" \"%s\"" % (thumb_jpg, nfs_thumb720_jpg)
     os.system(command)
 

@@ -8,7 +8,7 @@ debtagshw==0.1
 defer==1.0.6
 dirspec==13.10
 duplicity==0.6.23
-Flask==0.10.1
+Flask==1.0
 httplib2==0.8
 itsdangerous==0.24
 Jinja2==2.8

@@ -33,7 +33,7 @@ python-dateutil==2.4.2
 python-debian===0.1.21-nmu2ubuntu2
 pyxdg==0.25
 redis==2.10.5
-reportlab==3.0
+reportlab==3.5.55
 requests==2.2.1
 rq==0.5.6
 rq-dashboard==0.3.4
